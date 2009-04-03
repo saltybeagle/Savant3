@@ -1001,7 +1001,7 @@ class Savant3 {
 	 * 
 	 * @return string The template output.
 	 */
-	protected function getOutput($tpl = null)
+	public function getOutput($tpl = null)
 	{
 	    $output = $this->fetch($tpl);
         if ($this->isError($output)) {
