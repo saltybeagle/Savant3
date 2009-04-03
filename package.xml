@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.8.0alpha1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-http://pear.php.net/dtd/tasks-1.0.xsd
-http://pear.php.net/dtd/package-2.0
-http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.8.0alpha1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>Savant3</name>
  <channel>phpsavant.com</channel>
  <summary>A PHP5 template system that uses PHP for its logic; provides path searching, plugins, filters, and an optional compiler system.</summary>
  <description>Savant3 is an object-oriented system to help keep manipulation
-logic (&quot;model&quot; or &quot;controller&quot; scripts) separate from display
-logic (&quot;view&quot; scripts) using PHP-based templates.  Savant3 is
+logic (&apos;model&apos; or &apos;controller&apos; scripts) separate from display
+logic (&apos;view&apos; scripts) using PHP-based templates.  Savant3 is
 E_STRICT compliant for PHP5, provides a plugin model for
 convenience methods, supports output filter callbacks, allows
 for custom compilers, and provides path searching for themed
-(skinned) applications.
- 
- </description>
+(skinned) applications.</description>
  <lead>
   <name>Paul M. Jones</name>
   <user>pmjones</user>
@@ -27,11 +22,11 @@ for custom compilers, and provides path searching for themed
   <email>brett.bieber@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2009-02-18</date>
- <time>08:55:22</time>
+ <date>2009-04-03</date>
+ <time>12:50:31</time>
  <version>
-  <release>3.0.0</release>
-  <api>3.0.0</api>
+  <release>3.0.1</release>
+  <api>3.0.1</api>
  </version>
  <stability>
   <release>stable</release>
@@ -39,6 +34,86 @@ for custom compilers, and provides path searching for themed
  </stability>
  <license>LGPL License</license>
  <notes>
+* Modify __toString method signature for compatibility with PHP 5.3.
+No parameters should be sent. If you need to send a template parameter, use fetch($tpl) or setTemplate($tpl) then echo $savant.
+
+Thanks, Dan Bettles.
+
+* Add protected method getOutput() which will return the output including error_text if an error occurs.
+ </notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <dir name="Savant3">
+    <dir name="resources">
+     <file name="Savant3_Filter_trimwhitespace.php" role="php" />
+     <file name="Savant3_Plugin_ahref.php" role="php" />
+     <file name="Savant3_Plugin_date.php" role="php" />
+     <file name="Savant3_Plugin_htmlAttribs.php" role="php" />
+     <file name="Savant3_Plugin_image.php" role="php" />
+    </dir> <!-- /Savant3/resources -->
+    <file name="Error.php" role="php" />
+    <file name="Exception.php" role="php" />
+    <file name="Filter.php" role="php" />
+    <file name="Plugin.php" role="php" />
+   </dir> <!-- /Savant3 -->
+   <dir name="tests">
+    <dir name="resources">
+     <file name="savant.gif" role="test" />
+     <file name="Savant3_Plugin_fester.php" role="test" />
+    </dir> <!-- /tests/resources -->
+    <dir name="templates">
+     <file name="02_output.tpl.php" role="test" />
+     <file name="03_filters.tpl.php" role="test" />
+     <file name="04_plugins_ahref.tpl.php" role="test" />
+     <file name="04_plugins_date.tpl.php" role="test" />
+     <file name="04_plugins_fester.tpl.php" role="test" />
+     <file name="04_plugins_form.tpl.php" role="test" />
+     <file name="04_plugins_image.tpl.php" role="test" />
+     <file name="06_includes.tpl.php" role="test" />
+     <file name="07_escape.tpl.php" role="test" />
+     <file name="footer.tpl.php" role="test" />
+     <file name="header.tpl.php" role="test" />
+    </dir> <!-- /tests/templates -->
+    <file name="00_prepend.php" role="test" />
+    <file name="01_assign.phpt" role="test" />
+    <file name="02_output.phpt" role="test" />
+    <file name="03_filters.phpt" role="test" />
+    <file name="04_plugins_ahref.phpt" role="test" />
+    <file name="04_plugins_date.phpt" role="test" />
+    <file name="04_plugins_fester.phpt" role="test" />
+    <file name="04_plugins_image.phpt" role="test" />
+    <file name="05_errors.phpt" role="test" />
+    <file name="06_includes.phpt" role="test" />
+    <file name="07_escape.phpt" role="test" />
+    <file name="08_autoload.phpt" role="test" />
+   </dir> <!-- /tests -->
+   <file name="Savant3.php" role="php" />
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.1.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.3</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>3.0.0</release>
+    <api>3.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2006-01-01</date>
+   <license>LGPL License</license>
+   <notes>
 * Plugin htmlAttribs no longer renders a key when its value
 is null.
 
@@ -58,67 +133,27 @@ discovery and discussion of the problem.
 
 * Fixed bugs in stream support due to improper strpos() 
 param order.  Thanks, Antti Holvikari.
- </notes>
- <contents>
-  <dir name="/">
-   <dir name="Savant3">
-    <dir name="resources">
-     <file md5sum="773761857f5e3d09c2d07d8424edcff7" name="Savant3_Filter_trimwhitespace.php" role="php" />
-     <file md5sum="275390459d72485656accb505cd3a790" name="Savant3_Plugin_ahref.php" role="php" />
-     <file md5sum="4219bf1dca1a773d0f86e2e43aaaa696" name="Savant3_Plugin_date.php" role="php" />
-     <file md5sum="ea29212c25e3342d27a741e817595e1f" name="Savant3_Plugin_htmlAttribs.php" role="php" />
-     <file md5sum="ed0ab8e7bce015667cbe3f82b051a085" name="Savant3_Plugin_image.php" role="php" />
-    </dir> <!-- /Savant3/resources -->
-    <file md5sum="f5f068ac0af539e0e7a6f870d9d697b2" name="Error.php" role="php" />
-    <file md5sum="ed2304d16e288636cf0ed297db134eeb" name="Exception.php" role="php" />
-    <file md5sum="cdae92aeee6ee218b8c8a2746236eb45" name="Filter.php" role="php" />
-    <file md5sum="f5a84d2d1f98590d2225d62e0ddfef9b" name="Plugin.php" role="php" />
-   </dir> <!-- /Savant3 -->
-   <dir name="tests">
-    <dir name="resources">
-     <file md5sum="56f2d363f0159f7852212d60260f48df" name="savant.gif" role="test" />
-     <file md5sum="81666dc9179ca44a6008cf754cf3175a" name="Savant3_Plugin_fester.php" role="test" />
-    </dir> <!-- /tests/resources -->
-    <dir name="templates">
-     <file md5sum="4c3eaa1214f2be333919236545f5473d" name="02_output.tpl.php" role="test" />
-     <file md5sum="1882656933846fec87bce964457d57bd" name="03_filters.tpl.php" role="test" />
-     <file md5sum="b0d4726a2269f507b5a0801fe367bfbb" name="04_plugins_ahref.tpl.php" role="test" />
-     <file md5sum="8def3afabf720eb36e0b9963f3363765" name="04_plugins_date.tpl.php" role="test" />
-     <file md5sum="dfb2e892ce7973a30d05de10c7a1114a" name="04_plugins_fester.tpl.php" role="test" />
-     <file md5sum="777a54b323c963fc22e95c8a2ae4ec74" name="04_plugins_form.tpl.php" role="test" />
-     <file md5sum="d4fa364eb7e14ae1174d1f9eec7ee566" name="04_plugins_image.tpl.php" role="test" />
-     <file md5sum="09bb05742f17716f3e999dbc96af6b45" name="06_includes.tpl.php" role="test" />
-     <file md5sum="45ebcda1a0c6e41b42bd0f3b18a12335" name="07_escape.tpl.php" role="test" />
-     <file md5sum="0ed1357738d8565dbc46654a2ab33e09" name="footer.tpl.php" role="test" />
-     <file md5sum="df9ccae734561bf980f5c1399a314033" name="header.tpl.php" role="test" />
-    </dir> <!-- /tests/templates -->
-    <file md5sum="5291ab5a44f251c051fc04444d1e7e89" name="00_prepend.php" role="test" />
-    <file md5sum="0588659eb1f34953ed6350814cdd85dc" name="01_assign.phpt" role="test" />
-    <file md5sum="b085bbbe7b3e23901b240ddb590c0146" name="02_output.phpt" role="test" />
-    <file md5sum="fa322bb7f5d9169c8453b5fe005a2b48" name="03_filters.phpt" role="test" />
-    <file md5sum="49ad1d952e74729767e4570218713be7" name="04_plugins_ahref.phpt" role="test" />
-    <file md5sum="ab6f6180cccb856525f72c1908f467dc" name="04_plugins_date.phpt" role="test" />
-    <file md5sum="b455f7f358a55f06390a5179346c00b0" name="04_plugins_fester.phpt" role="test" />
-    <file md5sum="3ccb0a8721437ad64f6611e96494be3e" name="04_plugins_image.phpt" role="test" />
-    <file md5sum="42528048e3dc47800eb959ddbb538d65" name="05_errors.phpt" role="test" />
-    <file md5sum="9ee7953fe9df2b75aec4a4ffe2126fa1" name="06_includes.phpt" role="test" />
-    <file md5sum="528d795912b12b51fbab628a6761718f" name="07_escape.phpt" role="test" />
-    <file md5sum="c56dd462e8360babf1d8afe9c014e7bf" name="08_autoload.phpt" role="test" />
-   </dir> <!-- /tests -->
-   <file md5sum="19fdcdb91ea7a9cf6d2001aadf151129" name="Savant3.php" role="php">
-    <tasks:replace from="@package_version@" to="version" type="package-info" />
-   </file>
-  </dir> <!-- / -->
- </contents>
- <dependencies>
-  <required>
-   <php>
-    <min>5.0.0</min>
-   </php>
-   <pearinstaller>
-    <min>1.5.4</min>
-   </pearinstaller>
-  </required>
- </dependencies>
- <phprelease />
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>3.0.1</release>
+    <api>3.0.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-04-03</date>
+   <license>LGPL License</license>
+   <notes>
+* Modify __toString method signature for compatibility with PHP 5.3.
+No parameters should be sent. If you need to send a template parameter, use fetch($tpl) or setTemplate($tpl) then echo $savant.
+
+Thanks, Dan Bettles.
+
+* Add protected method getOutput() which will return the output including error_text if an error occurs.
+   </notes>
+  </release>
+ </changelog>
 </package>
