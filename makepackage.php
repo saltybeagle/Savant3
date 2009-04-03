@@ -66,7 +66,7 @@ No parameters should be sent. If you need to send a template parameter, use fetc
 
 Thanks, Dan Bettles.
 
-* Add protected method getOutput() which will return the output including error_text if an error occurs.
+* Add public method getOutput($tpl = null) which will return the output including error_text if an error occurs.
 ');
 
 //$pfm->addMaintainer('lead','saltybeagle','Brett Bieber','brett.bieber@gmail.com');

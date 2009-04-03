@@ -23,7 +23,7 @@ for custom compilers, and provides path searching for themed
   <active>yes</active>
  </lead>
  <date>2009-04-03</date>
- <time>13:05:01</time>
+ <time>13:10:04</time>
  <version>
   <release>3.0.1</release>
   <api>3.0.1</api>
@@ -39,7 +39,7 @@ No parameters should be sent. If you need to send a template parameter, use fetc
 
 Thanks, Dan Bettles.
 
-* Add protected method getOutput() which will return the output including error_text if an error occurs.
+* Add public method getOutput($tpl = null) which will return the output including error_text if an error occurs.
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -152,7 +152,7 @@ No parameters should be sent. If you need to send a template parameter, use fetc
 
 Thanks, Dan Bettles.
 
-* Add protected method getOutput() which will return the output including error_text if an error occurs.
+* Add public method getOutput($tpl = null) which will return the output including error_text if an error occurs.
    </notes>
   </release>
  </changelog>
