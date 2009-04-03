@@ -21,9 +21,12 @@ function dump(&$var, $label = null)
 }
 
 // add to the include_path
-$add = realpath(dirname(__FILE__) . '/../../');
-ini_set('include_path', ini_get('include_path') . ":$add");
+$add = realpath(dirname(__FILE__) . '/../');
+set_include_path($add);
+
+chdir(dirname(__FILE__));
 
 // make sure we have Savant ;-)
 require_once 'Savant3.php';
+
 ?>
