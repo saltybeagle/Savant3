@@ -46,7 +46,7 @@ try {
 
 ?>
 --EXPECT--
-object(Savant3_Error)#2 (4) {
+object(Savant3_Error)#3 (4) {
   ["code"] => string(11) "ERR_UNKNOWN"
   ["info"] => array(3) {
     ["type"] => string(12) "Savant_Error"

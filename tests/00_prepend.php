@@ -27,6 +27,6 @@ set_include_path($add);
 chdir(dirname(__FILE__));
 
 // make sure we have Savant ;-)
-require_once 'Savant3.php';
+require_once 'vendor/autoload.php';
 
 ?>
