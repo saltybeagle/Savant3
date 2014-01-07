@@ -1,0 +1,14 @@
+{
+    "name": "saltybeagle/savant3",
+    "description": "Savant3 template engine",
+    "license": "LGPL",
+    "authors": [
+        {
+            "name": "Brett Bieber",
+            "email": "brett.bieber@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": ["Savant3.php", "Savant3", "Savant3/resources"]
+    }
+}
