@@ -20,8 +20,8 @@ namespace Savant3;
 /**
  * Always have these classes available.
  */
-include_once dirname(__FILE__).'/Savant3/Filter.php';
-include_once dirname(__FILE__).'/Savant3/Plugin.php';
+include_once dirname(__FILE__) . '/Filter.php';
+include_once dirname(__FILE__) . '/Plugin.php';
 
 
 /**
