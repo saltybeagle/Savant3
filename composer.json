@@ -9,6 +9,6 @@
         }
     ],
     "autoload": {
-        "psr-4": {"Savant3\\": "src/Savant3"}
+        "psr-4": {"Savant3\\": "src"}
     }
 }
