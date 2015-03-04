@@ -1,5 +1,7 @@
 <?php
 
+namespace Savant3\resources;
+
 /**
 * 
 * Plugin to generate a formatted date using strftime() conventions.

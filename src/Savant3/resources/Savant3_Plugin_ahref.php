@@ -1,5 +1,7 @@
 <?php
 
+namespace Savant3\resources;
+
 /**
 * 
 * Generates an <a href="">...</a> tag.

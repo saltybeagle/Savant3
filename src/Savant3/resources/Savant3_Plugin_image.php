@@ -1,5 +1,9 @@
 <?php
 
+namespace Savant3\resources;
+
+use Savant3\Savant3_Plugin;
+
 /**
 * 
 * Plugin to generate an <img ... /> tag.
@@ -13,6 +17,7 @@
 * @version $Id: Savant3_Plugin_image.php,v 1.7 2005/08/12 14:34:09 pmjones Exp $
 *
 */
+
 
 /**
 * 

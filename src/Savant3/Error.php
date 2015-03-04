@@ -1,5 +1,7 @@
 <?php
 
+namespace Savant3;
+
 /**
 * 
 * Provides a simple error class for Savant.

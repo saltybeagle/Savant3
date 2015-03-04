@@ -1,5 +1,9 @@
 <?php
 
+namespace Savant3\resources;
+
+use Savant3\Savant3_Filter;
+
 /**
 * 
 * Filter to remove extra white space within the text.
@@ -17,6 +21,7 @@
 * @version $Id: Savant3_Filter_trimwhitespace.php,v 1.4 2005/05/29 15:27:07 pmjones Exp $
 *
 */
+
 
 /**
 * 

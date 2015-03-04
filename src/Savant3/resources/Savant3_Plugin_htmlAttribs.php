@@ -1,5 +1,9 @@
 <?php
 
+namespace Savant3\resources;
+
+use Savant3\Savant3_Plugin;
+
 /**
 * 
 * Plugin to convert an associative array to a string of tag attributes.
@@ -13,6 +17,7 @@
 * @version $Id: Savant3_Plugin_htmlAttribs.php,v 1.3 2005/09/12 17:49:27 pmjones Exp $
 * 
 */
+
 
 /**
 * 
