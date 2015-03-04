@@ -2,6 +2,8 @@
 
 namespace Savant3\resources;
 
+use Savant3\Savant3_Plugin;
+
 /**
  *
  * Plugin to generate a formatted date using strftime() conventions.
