@@ -10,5 +10,5 @@
     ],
     "autoload": {
         "psr-4": {"Savant3\\": "src/Savant3"}
-    },
+    }
 }
