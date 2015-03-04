@@ -9,6 +9,6 @@
         }
     ],
     "autoload": {
-        "classmap": ["Savant3.php", "Savant3", "Savant3/resources"]
+        "psr-4": {"Savant3\\": "src/Savant3"}
     }
 }

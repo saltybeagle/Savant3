@@ -1,5 +1,7 @@
 <?php
 
+namespace Savant3;
+
 /**
 * 
 * Provides an object-oriented template system for PHP5.
@@ -18,8 +20,8 @@
 /**
 * Always have these classes available.
 */
-include_once dirname(__FILE__) . '/Savant3/Filter.php';
-include_once dirname(__FILE__) . '/Savant3/Plugin.php';
+include_once dirname(__FILE__).'/Savant3/Filter.php';
+include_once dirname(__FILE__).'/Savant3/Plugin.php';
 
 
 /**
@@ -1275,7 +1277,7 @@ class Savant3 {
 		// are we throwing exceptions?
 		if ($this->__config['exceptions']) {
 			if (! class_exists('Savant3_Exception', $autoload)) {
-				include_once dirname(__FILE__) . '/Savant3/Exception.php';
+				include_once dirname(__FILE__).'/Savant3/Exception.php';
 			}
 			throw new Savant3_Exception($code);
 		}
@@ -1291,7 +1293,7 @@ class Savant3 {
 		
 		// make sure the Savant3 error class is available
 		if (! class_exists('Savant3_Error', $autoload)) {
-			include_once dirname(__FILE__) . '/Savant3/Error.php';
+			include_once dirname(__FILE__).'/Savant3/Error.php';
 		}
 		
 		// return it
@@ -1325,7 +1327,7 @@ class Savant3 {
 			// make sure the Savant3 error class is available for
 			// comparison
 			if (! class_exists('Savant3_Error', $autoload)) {
-				include_once dirname(__FILE__) . '/Savant3/Error.php';
+				include_once dirname(__FILE__).'/Savant3/Error.php';
 			}
 			// now compare the parentage
 			$is = $obj instanceof Savant3_Error;

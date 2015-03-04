@@ -1,4 +1,7 @@
 <?php
+
+namespace Savant3;
+
 /**
 * 
 * Throws PHP5 exceptions for Savant.
@@ -24,6 +27,6 @@
 * 
 */
 
-class Savant3_Exception extends Exception {
+class Savant3_Exception extends \Exception {
 }
 ?>
